@@ -22,7 +22,7 @@ SIM_FUN_UNIF <- function(niter, ssize, RR, prevE, baserisk, prD1E1, prD1E0, prD0
   
   #### DATA GENERATION FOR CASE-COHORT ESTIMATE
   D0 <- (D1E1 + D1E0)*2 # 2 controls per case
-  D0E1 <- rbinom(niter, D0, prevE) # exposed controls
+  D0E1 <- rbinom(niter, D0, E1/ssize) # exposed controls
   D0E0 <- D0 - D0E1 # unexposed controls
   
   #### CALCULATING OR ESTIMATE FOR CASE-COHORT
@@ -190,7 +190,7 @@ SIM_FUN_TRI <- function(niter, ssize, RR, prevE, baserisk, prD1E1, prD1E0, prD0E
   
   #### DATA GENERATION FOR CASE-COHORT ESTIMATE
   D0 <- (D1E1 + D1E0)*2 # 2 controls per case
-  D0E1 <- rbinom(niter, D0, prevE) # exposed controls
+  D0E1 <- rbinom(niter, D0, E1/ssize) # exposed controls
   D0E0 <- D0 - D0E1 # unexposed controls
   
   #### CALCULATING OR ESTIMATE FOR CASE-COHORT
@@ -341,7 +341,7 @@ SIM_FUN_TRAP <- function(niter, ssize, RR, prevE, baserisk, prD1E1, prD1E0, prD0
   
   #### DATA GENERATION FOR CASE-COHORT ESTIMATE
   D0 <- (D1E1 + D1E0)*2 # 2 controls per case
-  D0E1 <- rbinom(niter, D0, prevE) # exposed controls
+  D0E1 <- rbinom(niter, D0, E1/ssize) # exposed controls
   D0E0 <- D0 - D0E1 # unexposed controls
   
   #### CALCULATING OR ESTIMATE FOR CASE-COHORT
@@ -495,7 +495,7 @@ SIM_FUN_BETA <- function(niter, ssize, RR, prevE, baserisk, prD1E1, prD1E0, prD0
   
   #### DATA GENERATION FOR CASE-COHORT ESTIMATE
   D0 <- (D1E1 + D1E0)*2 # 2 controls per case
-  D0E1 <- rbinom(niter, D0, prevE) # exposed controls
+  D0E1 <- rbinom(niter, D0, E1/ssize) # exposed controls
   D0E0 <- D0 - D0E1 # unexposed controls
   
   #### CALCULATING OR ESTIMATE FOR CASE-COHORT
